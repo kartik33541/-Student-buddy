@@ -1,7 +1,7 @@
 
 // ================= BACKEND CALL =================
 async function callBackend(prompt) {
-  const res = await fetch("http://localhost:3001", {
+  const res = await fetch("https://student-buddy-production.up.railway.app", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

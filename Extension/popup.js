@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
             tabs?.[0]?.url?.match(/problems\/([^/]+)/)?.[1] ||
             "unknown-problem";
 
-          const res = await fetch("http://localhost:3001", {
+          const res = await fetch("https://student-buddy-production.up.railway.app", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ code, slug })
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tabs?.[0]?.url?.match(/problems\/([^/]+)/)?.[1] ||
         "unknown-problem";
 
-      const res = await fetch("http://localhost:3001", {
+      const res = await fetch("https://student-buddy-production.up.railway.app", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

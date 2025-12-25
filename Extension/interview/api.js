@@ -1,6 +1,6 @@
 // interview/api.js
 
-const API_URL = "http://localhost:3001";
+const API_URL = "https://student-buddy-production.up.railway.app";
 
 export async function startInterviewAPI(slug, code) {
   const res = await fetch(API_URL, {
