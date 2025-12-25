@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Student Buddy – LeetCode Mentor",
+  "version": "1.0",
+  "description": "AI mentor that provides hints without spoiling solutions on LeetCode.",
+
+  "permissions": [
+    "activeTab",
+    "clipboardRead"
+  ],
+
+  "optional_permissions": [
+    "microphone"
+  ],
+
+  "host_permissions": [
+    "https://leetcode.com/*",
+    "http://localhost:3001/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

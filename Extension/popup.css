@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 12px;
+  width: 360px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #0b0f14; /* dark gray-black */
+  color: #e6edf3;
+}
+
+/* ===== MAIN CARD ===== */
+.card {
+  background: #111827;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* ===== TITLE ===== */
+h3 {
+  margin: 0 0 16px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  color: #c084fc; /* purple accent */
+}
+
+/* ===== BUTTONS ===== */
+.button-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+button {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 10px 8px;
+  font-size: 13px;
+  color: #f9fafb;
+  cursor: pointer;
+  transition: background 0.2s ease, border 0.2s ease,
+    transform 0.1s ease;
+}
+
+button:hover {
+  background: #374151;
+  border-color: #c084fc;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ===== RESPONSE AREA ===== */
+#response {
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  padding: 14px;
+  margin-top: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+  font-size: 13.5px;
+  line-height: 1.7; /* keep line spacing clean */
+  color: #e5e7eb;
+  white-space: pre-wrap;
+}
+
+/* ⭐ VISUAL GAP BETWEEN BULLET POINTS (KEY FIX) */
+#response {
+  padding-bottom: 6px;
+}
+
+#response::before {
+  content: "";
+}
+
+/* ===== SECTION HEADINGS (AI OUTPUT) ===== */
+#response h3,
+#response h4 {
+  margin: 16px 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #c084fc;
+}
+
+/* ===== PARAGRAPHS ===== */
+#response p {
+  margin: 10px 0;
+}
+
+/* ===== BULLET POINTS (when rendered as lists) ===== */
+#response ul {
+  margin: 12px 0;
+  padding-left: 18px;
+}
+
+#response li {
+  margin-bottom: 14px; /* increased gap between points */
+}
+
+/* ===== CODE BLOCK (CHATGPT STYLE) ===== */
+#response pre {
+  background: #020617;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  padding: 14px;
+  margin: 14px 0;
+  overflow-x: auto;
+}
+
+#response code {
+  font-family: Consolas, "JetBrains Mono", monospace;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #f8fafc;
+}
+
+/* ===== EMPHASIS ===== */
+#response strong {
+  color: #c084fc;
+  font-weight: 600;
+}
+
+/* ===== SCROLLBAR ===== */
+#response::-webkit-scrollbar {
+  width: 6px;
+}
+
+#response::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 4px;
+}
+
+#response::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ===== ASK MENTOR BOX ===== */
+#ask-mentor-box {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+#mentor-input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #374151;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 13px;
+  outline: none;
+}
+
+#mentor-input::placeholder {
+  color: #9ca3af;
+}
+
+#mentor-input:focus {
+  border-color: #c084fc;
+}
+
+#mentor-submit {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #1f2937;
+  border: 1px solid #374151;
+  color: #f9fafb;
+  cursor: pointer;
+}
+
+#mentor-submit:hover {
+  border-color: #c084fc;
+}
+
+#mentor-voice-btn {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #020617;
+  border: 1px solid #374151;
+  color: #f9fafb;
+  cursor: pointer;
+}
+
+#mentor-voice-btn:hover {
+  border-color: #c084fc;
+}
+
+/* ===== INTERVIEW MODE SECTION ===== */
+.interview-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #1f2937;
+  text-align: center;
+}
+
+.interview-label {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-bottom: 8px;
+}
+
+.interview-btn {
+  width: 100%;
+  background: #0a2540;
+  border: 1px solid #1e3a8a;
+  border-radius: 14px;
+  padding: 12px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #e5e7eb;
+  cursor: pointer;
+  transition: background 0.2s ease, border 0.2s ease,
+    transform 0.1s ease;
+}
+
+.interview-btn:hover {
+  background: #1e3a8a;
+  border-color: #3b82f6;
+}
+
+.interview-btn:active {
+  transform: scale(0.97);
+}
+
+
+/*   New section      */
+#response {
+  white-space: pre-wrap;
+  line-height: 1.75;
+  font-size: 13.5px;
+  color: #e5e7eb;
+}
+
+/* Paragraph spacing */
+#response p {
+  margin-bottom: 10px;
+}
+
+/* Improve plain text blocks */
+#response {
+  word-wrap: break-word;
+}
+

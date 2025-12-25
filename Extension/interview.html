@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Interview Mode – Student Buddy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="interview.css" />
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="title">
+      🎯 Interview Mode
+    </div>
+    <div class="subtitle" id="problem-title">
+      Problem: Loading...
+    </div>
+  </header>
+
+  <!-- ===== STEP INDICATOR ===== -->
+  <div class="steps">
+    <div class="step active" id="step-code">1. Code Submission</div>
+    <div class="step" id="step-interview">2. Interview</div>
+    <div class="step" id="step-report">3. Report</div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container">
+
+    <!-- ========== STEP 1: CODE SUBMISSION ========== -->
+    <section class="panel" id="code-panel">
+      <h2>Submit Your Current Solution</h2>
+      <p class="info-text">
+        Paste or submit your current solution code.
+        This code will be used as the base for the interview.
+      </p>
+
+      <div class="code-actions">
+        <button id="paste-code-btn" class="primary-btn">
+          Paste from Clipboard
+        </button>
+      </div>
+
+      <textarea id="code-input" placeholder="Your C++ code will appear here..."></textarea>
+
+      <div class="panel-footer">
+        <button id="start-interview-btn" class="primary-btn">
+          Start Interview
+        </button>
+      </div>
+    </section>
+
+    <!-- ========== STEP 2: INTERVIEW ========== -->
+    <section class="panel hidden" id="interview-panel">
+      <h2>Interview Session</h2>
+
+      <div class="question-box">
+        <div class="label">Interviewer</div>
+        <div class="question-text" id="interview-question">
+          Loading first question...
+        </div>
+      </div>
+
+      <div class="answer-box">
+        <textarea id="answer-input" placeholder="Type your answer here..."></textarea>
+
+        <button id="speak-btn" class="secondary-btn" style="margin-top: 10px;">
+           Speak 
+        </button>
+      </div>
+
+
+      <div class="panel-footer">
+        <button id="submit-answer-btn" class="primary-btn">
+          Submit Answer
+        </button>
+      </div>
+    </section>
+
+    <!-- ========== STEP 3: REPORT ========== -->
+    <section class="panel hidden" id="report-panel">
+      <h2>Interview Summary</h2>
+
+      <div class="report-box" id="report-content">
+        Generating report...
+      </div>
+
+      <div class="panel-footer">
+        <button id="exit-btn" class="secondary-btn">
+          Exit Interview Mode
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JS will be added later -->
+  <script type="module" src="interview.js"></script>
+  <script src="interviewVoice.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,482 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0b1220, #020617 60%);
+  color: #e6edf3;
+}
+
+/* ===== HEADER ===== */
+.header {
+  padding: 16px 22px;
+  border-bottom: 1px solid #1f2937;
+  background: #020617;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.subtitle {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* ===== STEPS ===== */
+.steps {
+  display: flex;
+  gap: 10px;
+  padding: 10px 22px;
+  background: #020617;
+  border-bottom: 1px solid #1f2937;
+}
+
+.step {
+  font-size: 14px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #111827;
+  color: #9ca3af;
+}
+
+.step.active {
+  background: linear-gradient(180deg, #1f2937, #020617);
+  color: #f9fafb;
+  border: 1px solid #374151;
+  font-weight: 600;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 22px;
+}
+
+/* ===== PANELS ===== */
+.panel {
+  background: linear-gradient(180deg, #0b1220, #020617);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65);
+}
+
+.panel.hidden {
+  display: none;
+}
+
+.panel h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 24px;          /* ⬆ bigger main heading */
+  font-weight: 700;
+  color: #1e4974;
+}
+
+
+.info-text {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 14px;
+}
+
+/*  === subheadings=========*/
+
+/* ===== REPORT SUB-HEADINGS ===== */
+.report-box strong {
+  display: block;
+  font-size: 17px;          /* ⬆ bigger than body */
+  font-weight: 600;
+  margin-bottom: 10px;      /* ⬇ space before content */
+  color: #e5e7eb;
+  letter-spacing: 0.02em;
+}
+
+
+/* ===== CODE INPUT ===== */
+textarea {
+  width: 100%;
+  min-height: 320px;
+  max-height: 520px;
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  color: #e6edf3;
+  font-family: Consolas, "JetBrains Mono", monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* ===== QUESTION BOX ===== */
+.question-box {
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+}
+
+
+
+.label {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.question-text {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #e6edf3;
+}
+
+/* ===== FOOTER BUTTONS ===== */
+.panel-footer {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 9px 16px;
+  font-size: 13px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.primary-btn {
+  background: linear-gradient(180deg, #3b82f6, #2563eb);
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.primary-btn:hover {
+  background: linear-gradient(180deg, #2563eb, #1d4ed8);
+}
+
+.secondary-btn {
+  background: #1f2937;
+  color: #e5e7eb;
+  border-color: #374151;
+}
+
+.secondary-btn:hover {
+  background: #374151;
+}
+
+/* ===== REPORT ===== */
+.report-box {
+  background: linear-gradient(180deg, #020617, #020617);
+  border: 1px solid #1f2937;
+  border-radius: 18px;
+  padding: 26px;                 /* ⬆ more breathing space */
+  font-size: 14px;
+  line-height: 1.8;
+  white-space: normal;
+  color: #e6edf3;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02),
+              0 20px 40px rgba(0,0,0,0.6); /* ⬅ subtle depth */
+}
+
+
+/* Paragraphs inside report */
+.report-box p {
+  margin: 0 0 8px 0;
+  color: #cbd5e1;
+}
+
+/* Strong text */
+.report-box strong {
+  color: #f8fafc;
+}
+
+/* Lists inside report */
+.report-box ul {
+  margin: 6px 0 0 16px;
+  padding: 0;
+}
+
+.report-box li {
+  margin-bottom: 4px;
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+/* ===== INTERVIEW REPORT SECTIONS ===== */
+.report-section {
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.report-title {
+  margin: 0 0 8px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #c7d2fe;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.report-summary {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #e5E7EB;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* ===== SCORE ===== */
+.report-score {
+  font-size: 24px;
+  font-weight: 700;
+  color: #38bdf8;
+  margin: 4px 0 6px 0;
+}
+
+.report-score span {
+  font-size: 13px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.report-breakdown {
+  padding-left: 16px;
+  margin: 0;
+}
+
+.report-breakdown li {
+  font-size: 13px;
+  color: #cbd5e1;
+  margin-bottom: 3px;
+}
+
+/* ===== FOCUS AREAS ===== */
+.report-focus {
+  padding-left: 16px;
+  margin: 0;
+}
+
+.report-focus li {
+  font-size: 15px;
+  color: #e5e7eb;
+  margin-bottom: 4px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+
+
+/* ===== INTERVIEW REPORT SECTIONS ===== */
+.report-box {
+  display: flex;
+  flex-direction: column;
+  gap: 22px; /* space between 3 sections */
+}
+
+
+/* Each logical report section */
+.report-box strong {
+  display: block;
+  background: linear-gradient(180deg, #020617, #020617);
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  padding: 16px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #93c5fd; /* same accent across all sections */
+  margin-bottom: 12px;
+}
+
+/* Content under each section heading */
+.report-box strong + * {
+  background: linear-gradient(180deg, #020617, #020617);
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-top: -6px; /* visually connects header + content */
+}
+
+/* Final score emphasis */
+.report-box .score,
+.report-score {
+  font-size: 24px;
+  font-weight: 700;
+  color: #38bdf8;
+  margin: 8px 0 12px;
+}
+
+/* Breakdown & focus lists */
+.report-box ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.report-box li {
+  margin-bottom: 8px;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* Professional hover feedback */
+.report-box > *:hover {
+  border-color: #2563eb;
+  transition: border-color 0.2s ease;
+}
+
+/* Interview Summary text */
+.report-section p {
+  font-size: 15px;     /* ⬆ was ~14–15px */
+  font-weight: 500;      /* ⬆ slightly bolder */
+  line-height: 1.6;     /* ⬆ better readability */
+  color: #e5e7eb;
+}
+
+.score-breakdown {
+  margin-top: 14px;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #e5e7eb;
+}
+
+.score-breakdown li {
+  margin-bottom: 6px;
+}
+
+/* =========================
+   Interview Termination Report
+   ========================= */
+
+
+.termination-box {
+  border: 1px solid #1f2937;
+  border-radius: 16px;          /* slightly smoother */
+  padding: 28px 30px;           /* bigger box */
+  background: #020617;          /* same navy */
+}
+
+.termination-title {
+  font-size: 18px;        /* increased */
+  font-weight: 600;       /* slightly bolder */
+  color: #60a5fa;
+  margin-bottom: 16px;    /* spacing below */
+}
+
+.termination-message {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #e5e7eb;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.termination-divider {
+  border: none;
+  border-top: 1px solid #1f2937;
+  margin: 18px 0;
+}
+
+.termination-score {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ef4444; /* keep red – it’s good */
+  letter-spacing: 0.3px;
+}
+
+.report-title {
+  font-size: 20px;        /* was smaller */
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #60a5fa;         /* keep navy-blue accent */
+}
+
+/* Outer report container */
+#report-panel .panel {
+  padding: 32px 34px;     /* more space */
+  min-height: 320px;      /* taller feel */
+}
+
+
+/* =========================
+   Recommended Problems UI
+   ========================= */
+
+.recommendation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.recommendation-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 16px;
+  border-radius: 12px;
+
+  background: #020617;
+  border: 1px solid #1f2937;
+
+  color: #e5e7eb;
+  font-size: 14px;
+  font-weight: 500;
+
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.recommendation-card:hover {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 1px rgba(96, 165, 250, 0.4);
+}
+
+.recommendation-card .arrow {
+  color: #60a5fa;
+  font-size: 16px;
+}
+
+
+/* Time Pressure Logic  */
+
+.question-timer {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #93c5fd;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.question-timer.danger {
+  color: #ef4444;
+}
+
+.question-timer.hidden {
+  display: none;
+}

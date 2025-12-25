@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Buddy</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+  <div class="card">
+    <h3>Student Buddy</h3>
+
+    <!-- ===== HINTS & TOOLS ===== -->
+    <div class="button-group">
+      <button data-level="intuition">Intuition</button>
+      <button data-level="steps">Step-by-step</button>
+      <button data-level="concept">Concept</button>
+      <button data-level="algorithm">Algorithm</button>
+      <button data-level="brute">Brute Force</button>
+      <button data-level="optimal">Optimal</button>
+      <button id="analyze-code-btn">Analyze My Code</button>
+      <button id="ask-mentor-btn">Ask Mentor</button>
+    </div>
+
+    <!-- ===== ASK MENTOR (HIDDEN BY DEFAULT) ===== -->
+    <div id="ask-mentor-box" style="display: none;">
+      <input
+        id="mentor-input"
+        type="text"
+        placeholder="Ask anything about the problem (no code)..."
+      />
+      <button id="mentor-submit">Ask</button>
+      <button id="mentor-voice-btn" title="Speak">
+        Speak
+      </button>
+    </div>
+
+    <!-- ===== INTERVIEW MODE (NEW) ===== -->
+    <div class="interview-section">
+      <div class="interview-label">Interview Practice</div>
+      <button id="interview-mode-btn" class="interview-btn">
+        Interview Mode
+      </button>
+    </div>
+
+    <!-- ===== RESPONSE OUTPUT ===== -->
+    <div id="response"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
